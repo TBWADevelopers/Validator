@@ -18,9 +18,9 @@ public enum ValidationError: Equatable {
 }
 
 public struct ValidatorResult {
-    var id: String?
-    var error: ValidationError?
-    var isValid: Bool { error == nil }
+    public var id: String?
+    public var error: ValidationError?
+    public var isValid: Bool { error == nil }
     
     public init(id: String? = nil, error: ValidationError? = nil) {
         self.id = id
