@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct AnyValidator<T>: Validator {
-    var id: String?
+public struct AnyValidator<T>: Validator {
+    public var id: String?
     
     private let _validate: (T) -> ValidatorResult
     
-    init<Base: Validator>(_ base: Base) where Base.T == T {
+    public init<Base: Validator>(_ base: Base) where Base.T == T {
         _validate = base.validate
     }
     
-    func validate(input: T) -> ValidatorResult {
+    public func validate(input: T) -> ValidatorResult {
         _validate(input)
     }
 }
@@ -27,7 +27,7 @@ public class CombinedValidator<T> {
     private var next: CombinedValidator?
     private let input: T
     
-    init(input: T, validator: AnyValidator<T>?) {
+    public init(input: T, validator: AnyValidator<T>?) {
         self.input = input
         self.validator = validator
     }

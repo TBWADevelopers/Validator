@@ -17,14 +17,25 @@ public enum ResetPasswordError: Equatable {
 public struct ResetPassword {
     let old: String
     let new: String
-    let `repeat`: String? 
+    let `repeat`: String?
+    
+    public init(old: String, new: String, repeat: String?) {
+        self.old = old
+        self.new = new
+        self.repeat = `repeat`
+    }
 }
 
 public struct ResetPasswordValidator: Validator {
-    
     public var id: String?
     public var unique: Bool = true
     public let password: StringValidator
+    
+    public init(id: String? = nil, unique: Bool = true, password: StringValidator) {
+        self.id = id
+        self.unique = unique
+        self.password = password
+    }
     
     public func validate(input: ResetPassword) -> ValidatorResult {
                 

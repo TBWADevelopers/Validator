@@ -11,6 +11,12 @@ public struct Credentials {
     let login: String
     let password: String
     var passwordAgain: String?
+    
+    public init(login: String, password: String, passwordAgain: String? = nil) {
+        self.login = login
+        self.password = password
+        self.passwordAgain = passwordAgain
+    }
 }
 
 public enum CredentialsError: Equatable {
@@ -24,6 +30,12 @@ public struct CredentialsValidator: Validator {
     public var id: String?
     public let login: StringValidator
     public let password: StringValidator
+    
+    public init(id: String? = nil, login: StringValidator, password: StringValidator) {
+        self.id = id
+        self.login = login
+        self.password = password
+    }
     
     public func validate(input: Credentials) -> ValidatorResult {
         

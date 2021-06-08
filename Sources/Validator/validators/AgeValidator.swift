@@ -8,9 +8,13 @@
 import Foundation
 
 public struct AgeValidator: Validator {
-    
     public var id: String?
     public let range: Range<Int>
+    
+    public init(id: String? = nil, range: Range<Int>) {
+        self.id = id
+        self.range = range
+    }
     
     public func validate(input: Date) -> ValidatorResult {
         let calendar = Calendar.current
@@ -25,7 +29,7 @@ public struct AgeValidator: Validator {
     }
 }
 
-extension AgeValidator {
+public extension AgeValidator {
     init(id: String? = nil, age: Int) {
         self.init(id: id, range: age..<Int.max)
     }

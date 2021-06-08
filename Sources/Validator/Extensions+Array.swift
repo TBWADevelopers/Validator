@@ -19,20 +19,24 @@ extension LenghtValidator: StringValidator {}
 private protocol DateValidator: SomeValidator {
     func validate(input: Date) -> ValidatorResult
 }
-
+ 
 extension AgeValidator: DateValidator {}
 
-struct Validators<V> {
+public struct Validators<V> {
     private let array: [SomeValidator]
+    
+    public init(array: [SomeValidator]) {
+        self.array = array
+    }
 }
 
 extension Validators: ExpressibleByArrayLiteral {
-    init(arrayLiteral elements: SomeValidator...) {
+    public init(arrayLiteral elements: SomeValidator...) {
         self.array = Array(elements)
     }
 }
 
-extension Validators where V == String {
+public extension Validators where V == String {
     func validate(input: String) -> ValidatorResult {
         let strings = array.compactMap { $0 as? StringValidator }
         for validator in strings {
@@ -46,7 +50,7 @@ extension Validators where V == String {
     }
 }
 
-extension Validators where V == Date {
+public extension Validators where V == Date {
     func validate(input: Date) -> ValidatorResult {
         let dates = array.compactMap { $0 as? DateValidator }
         for validator in dates {

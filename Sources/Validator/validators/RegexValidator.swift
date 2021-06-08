@@ -11,6 +11,11 @@ public struct RegexValidator: Validator {
     public var id: String?
     public let pattern: String
     
+    public init(id: String? = nil, pattern: String) {
+        self.id = id
+        self.pattern = pattern
+    }
+    
     public func validate(input: String) -> ValidatorResult {
         if input.regex(pattern).isEmpty {
             return ValidatorResult(id: id, error: .regex)

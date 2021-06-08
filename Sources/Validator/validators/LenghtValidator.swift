@@ -12,6 +12,12 @@ public struct LenghtValidator: Validator {
     public var min: Int?
     public var max: Int?
     
+    public init(id: String? = nil, min: Int? = nil, max: Int? = nil) {
+        self.id = id
+        self.min = min
+        self.max = max
+    }
+    
     public func validate(input: String) -> ValidatorResult {
         if let min = min, input.count < min {
             return ValidatorResult(id: id, error: .minLenght)
@@ -25,7 +31,7 @@ public struct LenghtValidator: Validator {
     }
 }
 
-extension LenghtValidator {
+public extension LenghtValidator {
     init(id: String? = nil, exact: Int) {
         self.id = id
         self.min = exact

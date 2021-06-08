@@ -21,6 +21,11 @@ public struct ValidatorResult {
     var id: String?
     var error: ValidationError?
     var isValid: Bool { error == nil }
+    
+    public init(id: String? = nil, error: ValidationError? = nil) {
+        self.id = id
+        self.error = error
+    }
 }
 
 public protocol Validator {
