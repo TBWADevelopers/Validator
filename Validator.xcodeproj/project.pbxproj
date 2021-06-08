@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D01DAEBE266F9D0700334514 /* ResetPasswordValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DAEBD266F9D0700334514 /* ResetPasswordValidatorTests.swift */; };
+		D01DAEC0266F9EC500334514 /* ResetPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DAEBF266F9EC500334514 /* ResetPasswordValidator.swift */; };
 		D01DCB352667CBE30027739E /* CredentialsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DCB342667CBE30027739E /* CredentialsValidator.swift */; };
 		D01DCB372667CC980027739E /* CredentialsValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01DCB362667CC980027739E /* CredentialsValidatorTests.swift */; };
 		D048AB06265D1E3000DE1891 /* CombinedValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D048AB05265D1E3000DE1891 /* CombinedValidator.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D01DAEBD266F9D0700334514 /* ResetPasswordValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordValidatorTests.swift; path = ../../../../Documents/ResetPasswordValidatorTests.swift; sourceTree = "<group>"; };
+		D01DAEBF266F9EC500334514 /* ResetPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordValidator.swift; sourceTree = "<group>"; };
 		D01DCB342667CBE30027739E /* CredentialsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsValidator.swift; sourceTree = "<group>"; };
 		D01DCB362667CC980027739E /* CredentialsValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsValidatorTests.swift; sourceTree = "<group>"; };
 		D048AB05265D1E3000DE1891 /* CombinedValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedValidator.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				D048AB0F265D34DC00DE1891 /* CharacterSetValidator.swift */,
 				D048AB18265D44F600DE1891 /* AgeValidator.swift */,
 				D01DCB342667CBE30027739E /* CredentialsValidator.swift */,
+				D01DAEBF266F9EC500334514 /* ResetPasswordValidator.swift */,
 			);
 			path = validators;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				D048AB16265D440D00DE1891 /* AgeValidatorTests.swift */,
 				D01DCB362667CC980027739E /* CredentialsValidatorTests.swift */,
 				D04B4C79266E415600315582 /* EmailValidatorTests.swift */,
+				D01DAEBD266F9D0700334514 /* ResetPasswordValidatorTests.swift */,
 				D0F3EEC5265548BA003D1CA2 /* Info.plist */,
 			);
 			path = ValidatorTests;
@@ -256,6 +262,7 @@
 				D048AB08265D2EB200DE1891 /* Extensions+Array.swift in Sources */,
 				D048AB0C265D318200DE1891 /* Extensions+String.swift in Sources */,
 				D048AB12265D3DF200DE1891 /* LenghtValidator.swift in Sources */,
+				D01DAEC0266F9EC500334514 /* ResetPasswordValidator.swift in Sources */,
 				D0F3EED0265548D1003D1CA2 /* Validator.swift in Sources */,
 				D048AB14265D3E0700DE1891 /* RegexValidator.swift in Sources */,
 				D048AB10265D34DC00DE1891 /* CharacterSetValidator.swift in Sources */,
@@ -273,6 +280,7 @@
 				D0F3EEC4265548BA003D1CA2 /* RegexValidatorTests.swift in Sources */,
 				D0F3EED426555759003D1CA2 /* CombinedValidatorTests.swift in Sources */,
 				D04B4C7A266E415600315582 /* EmailValidatorTests.swift in Sources */,
+				D01DAEBE266F9D0700334514 /* ResetPasswordValidatorTests.swift in Sources */,
 				D048AB17265D440D00DE1891 /* AgeValidatorTests.swift in Sources */,
 				D048AB0E265D325600DE1891 /* CharacterSetValidatorTests.swift in Sources */,
 			);

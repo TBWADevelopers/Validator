@@ -14,6 +14,7 @@ public enum ValidationError: Equatable {
     case characterSet
     case age
     case credentials(CredentialsError)
+    case resetPassword(ResetPasswordError)
 }
 
 public struct ValidatorResult {

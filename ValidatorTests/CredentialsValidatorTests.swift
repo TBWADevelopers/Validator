@@ -34,7 +34,7 @@ class CredentialsValidatorTests: XCTestCase {
         XCTAssertNil(result.error)
     }
     
-    func testInvalidMisMatch() throws {
+    func testInvalidmismatch() throws {
         let input = Credentials(login: "lox", password: "092", passwordAgain: "122")
         
         let login = RegexValidator(pattern: "[a-z]")
@@ -43,7 +43,7 @@ class CredentialsValidatorTests: XCTestCase {
         let result = validator.validate(input: input)
         
         XCTAssertFalse(result.isValid)
-        XCTAssertEqual(result.error, .credentials(.misMatchPassword))
+        XCTAssertEqual(result.error, .credentials(.mismatchPassword))
     }
     
     func testInvalidPassword() {

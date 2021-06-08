@@ -16,7 +16,7 @@ public struct Credentials {
 public enum CredentialsError: Equatable {
     case login
     case password
-    case misMatchPassword
+    case mismatchPassword
 }
 
 public struct CredentialsValidator: Validator {
@@ -38,9 +38,17 @@ public struct CredentialsValidator: Validator {
         }
         
         if let passwordAgain = input.passwordAgain, input.password != passwordAgain {
-            return ValidatorResult(id: id, error: .credentials(.misMatchPassword))
+            return ValidatorResult(id: id, error: .credentials(.mismatchPassword))
         }
         
         return ValidatorResult(id: id, error: nil)
+    }
+}
+
+public extension CredentialsValidator {
+    
+    init(loginPattern: String, passwordPattern: String) {
+        self.login = RegexValidator(id: nil, pattern: loginPattern)
+        self.password = RegexValidator(id: nil, pattern: passwordPattern)
     }
 }
