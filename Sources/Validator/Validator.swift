@@ -26,6 +26,8 @@ public struct ValidatorResult {
         self.id = id
         self.error = error
     }
+    
+    public static let valid = ValidatorResult()
 }
 
 public protocol Validator {
