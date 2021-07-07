@@ -23,7 +23,7 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/TBWADevelopers/Validator'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'developers@tbwamobile.com' }
+  s.author           = 'developers@tbwamobile.com'
   s.source           = { :git => 'https://github.com/developers@tbwamobile.com/Validator.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
